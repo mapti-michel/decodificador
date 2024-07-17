@@ -1,0 +1,29 @@
+:root{
+    --cor-fundo: #E5E5E5;
+    
+    --cor-fonte-ativado: #FFFF;
+    --cor-fonte-desativado: #0A3871;
+
+    --cor-botao-ativado: #0A3871;
+    --cor-botao-desativado: #D8DFE8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--cor-fundo);
+}
+
+
+.botao_ativado{
+    background-color: var(--cor-botao-ativado);
+    color: var(--cor-fonte-ativado);
+}
+
+.botao_desativado{
+    background-color: var(--cor-botao-desativado);
+    color: var(--cor-fonte-desativado);
+}
