@@ -1,6 +1,6 @@
 :root{
     --cor-fundo: #E5E5E5;
-    
+
     --cor-fonte-ativado: #FFFF;
     --cor-fonte-desativado: #0A3871;
 
@@ -9,21 +9,125 @@
 }
 
 * {
-    margin: 0;
-    padding: 0;
+    background: var(--cor-fundo);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
 }
 
-body{
-    background-color: var(--cor-fundo);
+.logoAlura{
+    margin-left: 10px;
+    padding-top: 10px;
+    width: 8%;
+    z-index: 1;
 }
 
-
-.botao_ativado{
-    background-color: var(--cor-botao-ativado);
-    color: var(--cor-fonte-ativado);
+main{
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 80px;
 }
 
-.botao_desativado{
-    background-color: var(--cor-botao-desativado);
-    color: var(--cor-fonte-desativado);
+.text-area{
+    border: none;
+    color: #0A3871;
+    margin-top: 90px;
+    text-transform: lowercase;
+    font-size: 32px;
 }
+
+::placeholder{ color: #0A3871; }
+    .text-area:focus{
+        outline: none;
+    }
+
+.mensagem{
+    background: white;
+/*    background-image: url("../assets/imgBusca.png"); */
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 24px;
+    color: #0A3871;
+    margin-left: 90px;
+    margin-top: 2px;
+    padding-left: 20px;
+    position: fixed;
+    font-size: 24px;
+    height: 80%;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.mensagem:focus{
+    outline: none;
+}
+
+.botoes{
+    display: flex;
+    margin-top: 10px;
+}
+
+.btn-desencriptar{
+    background-color: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 30px;
+    width: 320px;
+    font-size: 32px;
+}
+
+.btn-encriptar{
+    background-color: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 67px;
+    width: 320px;
+    font-size: 32px;
+}
+
+.btn-copiar{
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 100px;
+    margin-top: 560px;
+    position: absolute;
+    width: 336px;
+    font-size: 32px;
+}
+
+.informacao{
+    color: #425e57;
+    font-size: 12px;
+}
+
+.informacao-busca{
+    background-color: #FFFF;
+    color: #343A40;
+    font-size: 24px;
+    margin-top: 350px;
+    margin-left: 7%;
+    position: absolute;
+    z-index: 1;
+}
+
+.informacao-busca-baixo{
+    background-color: #FFFF;
+    color: #495057;
+    font-size: 16px;
+    margin-top: 390px;
+    margin-left: 7.5%;
+    position: absolute;
+    z-index: 1;
+    width: 20%;
+    text-align: center;
+}
+
