@@ -1,25 +1,46 @@
 const textArea = document.querySelector(".text-area");
 const mensagem = document.querySelector(".mensagem");
 
+const btnCriptar = document.querySelector(".btn-encriptar");
+const btnDescriptar = document.querySelector(".btn-copiar");
 const btnCopiar = document.querySelector(".btn-copiar");
 
+const info = document.querySelector(".informacao-busca");
+const infoBaixo = document.querySelector(".informacao-busca-baixo");
 
 mensagem.style.backgroundImage = "url('/assets/imgBusca.png')";
 
+btnCriptar.style.disabled = true;
+btnDescriptar.style.disabled = true;
+btnCopiar.style.disabled = true;
+
 btnCopiar.style.display = 'none';
+
 // A letra "e" é convertida para "enter"
 // A letra "i" é convertida para "imes"
 // A letra "a" é convertida para "ai"
 // A letra "o" é convertida para "ober"
 // A letra "u" é convertida para "ufat"
 
+function ativaBotao(){
+    if (textArea.value.length > 0){
+        btnCriptar.style.disabled = false;
+    }
+}
 
 function btEncriptar(){
-    const textoEncriptado = encriptografar(textArea.value);
-    mensagem.value = textoEncriptado;
-    mensagem.style.backgroundImage = "url('')";
-    textArea.value = "";
-    btnCopiar.style.display = 'block';
+
+    if (textArea.value == ""){
+
+    }else{
+        const textoEncriptado = encriptografar(textArea.value);
+        mensagem.value = textoEncriptado;
+        mensagem.style.backgroundImage = "url('')";
+        info.style.display = 'none';
+        infoBaixo.style.display = 'none'
+        textArea.value = "";
+        btnCopiar.style.display = 'block';
+    }
 }
 
 function btDesencriptar(){
@@ -70,5 +91,7 @@ function btCopy(){
     mensagem.style.backgroundImage = "url('/assets/imgBusca.png')";
     mensagem.value = "";
     btnCopiar.style.display = 'none';
+    info.style.display = 'block';
+    infoBaixo.style.display = 'block'
 
 }
