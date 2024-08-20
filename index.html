@@ -15,21 +15,18 @@
         <img class="logoAlura" src="/assets/logoAlura.png" alt="Logo da Alura">
     </header>
     <main>
-        <section>
+        <section class="ladoEsquerdo">
             <textarea class="text-area" cols="41" rows="5" placeholder="Digite seu texto" onchange="ativaBotao()"></textarea>
+            <h6 class="informacao"><img src="assets/bi_exclamation-circle-fill.png"/>Apenas letras minúsculas e sem acento.</h6>
 
-        <div class="informacoes">
-            <h6 class="informacao">Apenas letras minúsculas e sem acento.</h6>
-        </div>
-        <div class="botoes">
-            <button class="btn-encriptar" onclick="btEncriptar()">Criptografar</button>
-            <button class="btn-desencriptar" onclick="btDesencriptar()">Descriptografar</button>
-        </div>
+            <div class="botoes">
+                <button class="btn-encriptar" onclick="btEncriptar()">Criptografar</button>
+                <button class="btn-desencriptar" onclick="btDesencriptar()">Descriptografar</button>
+            </div>
         </section>
 
-        <section>
-            <textarea class="mensagem" cols="41" rows="5" readonly>
-            </textarea>
+        <section class="ladoDireito">
+            <textarea class="mensagem" readonly></textarea>
             <p class="informacao-busca">Nenhuma mensagem encontrada</p>
             <p class="informacao-busca-baixo">Digite um texto que você deseja criptografar ou descriptografar.</p>
 
